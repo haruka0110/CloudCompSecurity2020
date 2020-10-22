@@ -11,7 +11,9 @@ def get_lots(request):
     """
     #request_json = request.get_json()
     lots_id = random.randint(1,60)
-    img_src = "台北新莊地藏庵六十甲子籤/籤詩網%20-%20台北新莊地藏庵六十甲子籤_第"+ "{:02d}".format(lots_id) + "籤.jpg"
+    img_src = "http://www.chance.org.tw/%E7%B1%A4%E8%A9%A9%E9%9B%86/%E5%85%AD%E5%8D%81%E7\
+    %94%B2%E5%AD%90%E7%B1%A4/台北新莊地藏庵六十甲子籤/籤詩網%20-%20台北新莊地藏庵六十甲子籤_第"+ "\
+    :02d}".format(lots_id) + "籤.jpg"
 
     # Set CORS headers for the main request
     headers = {
@@ -19,5 +21,3 @@ def get_lots(request):
     }
 
     return (img_src, 200, headers)
-
-print(get_lots(""))

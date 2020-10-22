@@ -11,11 +11,11 @@
     <img id="result" src="" alt="抽籤結果" style="display:none">
   </body>
   <script>
-    	$("#get_lots").click(function(event) {
-    		$.post( "https://us-east1-credible-art-292416.cloudfunctions.net/draw_lots", function( data ) {
-			  		$( "#result" ).attr("src", data);
-			  		$( "#result" ).show();
-			});
-    	});
+      $("#get_lots").click(function(event) {
+        $.post( "https://us-east1-credible-art-292416.cloudfunctions.net/draw_lots", function( data ) {
+            $( "#result" ).attr("src", data);
+            $( "#result" ).show();
+      });
+      });
     </script>
 </html>
