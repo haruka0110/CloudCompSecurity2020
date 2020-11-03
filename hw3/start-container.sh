@@ -32,8 +32,11 @@ done
 
 sudo docker cp mapper.py hadoop-master:/root/mapper.py
 sudo docker cp reducer.py hadoop-master:/root/reducer.py
-sudo docker cp input/log.txt hadoop-master:/root/log.txt
+sudo docker cp input hadoop-master:/root/input
 sudo docker cp python_log_analysis.sh hadoop-master:/root/python_log_analysis.sh
+sudo docker cp JavaLogAnalysis.java hadoop-master:/root/JavaLogAnalysis.java
+sudo docker cp put_data.sh hadoop-master:/root/put_data.sh
+sudo docker cp java_log_analysis.sh hadoop-master:/root/java_log_analysis.sh
 
 # get into hadoop master container
 sudo docker exec -it hadoop-master bash

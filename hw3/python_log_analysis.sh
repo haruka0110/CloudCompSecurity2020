@@ -1,13 +1,7 @@
 #!/bin/bash
 # log analysis in python
 
-# create input directory on HDFS
-hadoop fs -mkdir -p input
-
-# put input files to HDFS
-hdfs dfs -put ./input/* input
-
-# run wordcount 
+# run log analysis 
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
 -file mapper.py    -mapper mapper.py \
 -file reducer.py   -reducer reducer.py \
